@@ -5,7 +5,8 @@ Returns a list of lists of integers representing the Pascal’s triangle of n.
 
 
 def pascal_triangle(n):
-    """Implements the pascal triangle with formula (n+1)C(r) = (n)C(r - 1) + (n)C(r)"""
+    """Implements the pascal triangle
+    with formula (n+1)C(r) = (n)C(r - 1) + (n)C(r)"""
     triangle = []
     if type(n) is not int or n <= 0:
         return triangle
