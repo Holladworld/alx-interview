@@ -2,21 +2,20 @@
 """
 Returns a list of lists of integers representing the Pascal’s triangle of n.
 """
-'''Pascal triangle formula is (n+1)C(r) = (n)C(r - 1) + (n)C(r). It means that the number of ways to choose r items out of a total of n + 1 items is the same as adding the number of ways to choose r - 1 items out of a total of n items and the number of ways to choose r items out of a total of n items.'''
 
 
 def pascal_triangle(n):
-    """Implements the pascal triangle."""
+    """Implements the pascal triangle with formula (n+1)C(r) = (n)C(r - 1) + (n)C(r)"""
     triangle = []
     if type(n) is not int or n <= 0:
         return triangle
     for index in range(n):
         line = []
-        for jndex in range(index + 1):
-            if jndex == 0 or jndex == index:
+        for zndex in range(index + 1):
+            if zndex == 0 or zndex == index:
                 line.append(1)
-            elif index > 0 and jndex > 0:
-                line.append(triangle[index - 1][jndex - 1] +
-                            triangle[index - 1][jndex])
+            elif index > 0 and zndex > 0:
+                line.append(triangle[index - 1][zndex - 1] +
+                            triangle[index - 1][zndex])
         triangle.append(line)
     return triangle
